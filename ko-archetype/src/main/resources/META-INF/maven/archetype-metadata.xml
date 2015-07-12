@@ -35,6 +35,9 @@
     <requiredProperty key="webpath">
         <defaultValue>target/client-web</defaultValue>
     </requiredProperty>  
+    <requiredProperty key="teavmpath">
+        <defaultValue>target/client-teavm</defaultValue>
+    </requiredProperty>
     <requiredProperty key="netbeanspath">
         <defaultValue>target/client-netbeans</defaultValue>
     </requiredProperty>  
@@ -125,6 +128,26 @@
         <include>**/*.java</include>
       </includes>
     </fileSet>
+
+    <fileSet filtered="true">
+        <directory>__teavmpath__</directory>
+        <includes>
+            <include>pom.xml</include>
+        </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true">
+      <directory>__teavmpath__/src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true">
+      <directory>__teavmpath__/src/main/webapp</directory>
+      <includes>
+        <include>**/*</include>
+      </includes>
+    </fileSet>
+
     <fileSet filtered="true">
         <directory>__netbeanspath__</directory>
         <includes>

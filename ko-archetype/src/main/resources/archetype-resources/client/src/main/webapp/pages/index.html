@@ -71,7 +71,7 @@
             </span>
         </div>
 #end        
-#if ($webpath.indexOf("target/") != 0)
+#if ($webpath.indexOf("target/") != 0 || $teavmpath.indexOf("target/") != 0)
 <!-- ${browser.bootstrap} -->
 #end
     </body>

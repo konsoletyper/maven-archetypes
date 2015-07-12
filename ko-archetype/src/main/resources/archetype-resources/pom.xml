@@ -14,6 +14,9 @@
 #if ($webpath.indexOf("target/") != 0)
         <module>$webpath</module>
 #end
+#if ($teavmpath.indexOf("target/") != 0)
+        <module>$teavmpath</module>
+#end
 #if ($netbeanspath.indexOf("target/") != 0)
         <module>$netbeanspath</module>
 #end
@@ -31,6 +34,11 @@
         <bck2brwsr.version>${bck2brwsr.version}</bck2brwsr.version>
         <bck2brwsr.obfuscationlevel>FULL</bck2brwsr.obfuscationlevel>
 #end    
+#if ($teavmpath.indexOf("target/") != 0)
+        <teavm.version>${teavm.version}</teavm.version>
+        <teavm.minifying>true</teavm.minifying>
+        <teavm.debug>false</teavm.debug>
+#end
 #if ($netbeanspath.indexOf("target/") != 0)
     <nb.html.version>${nb.html.version}</nb.html.version>
 #end    
